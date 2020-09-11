@@ -1,0 +1,43 @@
+body {
+	margin: 0;   /*turns off default body margin*/
+}
+header {
+	background: #999;
+	color: white;
+}
+header h1 {
+	margin: 0px 0px 15px 0px;
+	/*display: inline;*/
+}
+nav ul {
+	margin: 0;
+	/*display: inline;*/
+	padding: 0;
+}
+nav ul li {   /*added specificity (li, in a ul, in a nav) to affect only the navbar*/
+	background: black;
+	display: inline-block;   /*"inline" is less flexible*/
+	list-style-type: none;
+	color: white;   /*has no effect, because hyperlinks' color overrides*/
+	margin: 0px 20px;
+	padding: 5px 30px;   /*margin adds space to outside of element, padding adds to inside*/
+}
+nav ul li a {
+	color: white;
+}
+.row {   /*what would div.row vs div .row apply to?*/
+	clear:both;
+}
+.col {
+	background: #888;
+	float: left;
+	width: 31%;   /*makes them fill up the page*/
+	margin: 1%;   /*makes them "bump around"*/
+	/*just barely, with 31*3 + 1*6 = 99%*/
+	/*display: inline; also works but adds spaces
+	margin: 0;*/
+	border-radius: 4px;
+}
+footer {   /*should be obsolete with pseudo-element .row:after*/
+	clear: both;
+}
